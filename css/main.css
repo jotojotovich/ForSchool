@@ -71,3 +71,47 @@ a.rollover:hover
     /*right: 600px;*/
     margin: auto;
 }
+/**************************************/
+/* ****Google fonts*** */
+#google-fonts-pt
+{
+    font-family: 'PT-sans';
+    font-size: 17px;
+    padding-left: 10px;
+}
+/* ****** /Google fonts ***/
+/***************************************/
+
+/* ***** Links1 ***** */
+#link1
+{
+    color: #ccc; /* Цвет ссылки */
+    text-decoration: none;
+    outline: none; /* Убираем границу вокруг ссылок  */
+    font-family: Verdana; /* Шрифт ссылки в этом месте */
+    margin: 10px;
+
+}
+#link1:hover
+{
+    color: #333;
+    text-decoration: underline;
+    background-color: #ccc;
+}
+/* /Links1 */
+
+/* Li1 */
+#li1
+{
+color: #808000;
+font-size: 17px;
+/*font-family: 'PT-sans';*/
+}
+
+/* **** /Li1 ******** */
+
+#span1
+{
+    margin: 40px;
+    font-size: 20px;
+}

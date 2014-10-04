@@ -38,7 +38,7 @@ function OpenWord()
 {
                  
  				var mylink = document.getElementById("MyLink");
-                mylink.setAttribute("href", "../ReadinessPlan.xlsx");
+                mylink.setAttribute("href", "../ReadinessPlan.docx");
                 mylink.click();
 
 }
