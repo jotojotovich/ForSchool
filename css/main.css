@@ -1,0 +1,73 @@
+body
+{
+	margin: 0px; padding: 0px;
+	background-color: #333;
+	color: #ccc;
+	font-family: Verdana;
+	font-size: 12pt;
+}
+.link a
+{
+	display: block; /* Ссылка как блочный элемент */
+    text-align: middle; /* Выравнивание по центру */
+    height: 100%; /* Высота на весь слой */
+    color: #ccc; /* Цвет ссылки */
+    text-decoration: none;
+    outline: none; /* Убираем границу вокруг ссылок  */
+}
+#main
+{
+	margin: 20px auto;
+	max-width: 1300px; min-width: 5px;
+	overflow: hidden;
+}
+article.main
+{
+	background-color: #00f;
+	color: #eee;
+	font-size: 50pt;
+	position: fixed;
+	width: 100%;
+}
+#elementright
+{
+	float: right;
+	margin-top: 25px;
+}
+a.rollover
+{
+    background: url(../img/sun1.png); /* Путь к файлу с исходным рисунком  */
+    display: block; /*  Рисунок как блочный элемент */
+    width: 196px; /* Ширина рисунка */
+    height: 183px; /*  Высота рисунка */
+    /*right: 600px;*/
+    margin: auto;
+}
+a.rollover:hover
+{
+    background: url(../img/sun2.png); /* Путь к файлу с заменяемым рисунком  */
+}
+.center
+{
+    width: 33%; /* Ширина элемента в пикселах */
+    
+    /*background: #ccc; /* Цвет фона - #fc0*/
+    /*height: 33%;*/
+    float: left;/* блоки <div> будут располагаться в строку*/
+}
+#innerdiv
+{
+	padding: 20px; /* Поля вокруг текста */
+    /*margin: 20px auto; /* Выравниваем по центру */
+    margin: 20px;
+    border: 2px solid #ccc;
+}
+ .img
+{
+    /*background: url(../img/sun1.png); /* Путь к файлу с исходным рисунком  */
+    display: block; /*  Рисунок как блочный элемент */
+    width: 100%; /* Ширина рисунка */
+    height: 100%; /*  Высота рисунка */
+    /*right: 600px;*/
+    margin: auto;
+}
