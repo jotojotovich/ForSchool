@@ -100,6 +100,26 @@ a.rollover:hover
 }
 /* /Links1 */
 
+/* ***** Links2 ***** */
+#link2
+{
+    color: #ccc; /* Цвет ссылки */
+    text-decoration: none;
+    outline: none; /* Убираем границу вокруг ссылок  */
+    font-family: 'PT-sans'; /* Шрифт ссылки в этом месте */
+    margin: 10px;
+
+}
+#link2:hover
+{
+    color: #333;
+    text-decoration: underline;
+    background-color: #ccc;
+}
+/* /Links2 */
+
+
+
 /* Li1 */
 #li1
 {

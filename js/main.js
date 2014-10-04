@@ -42,3 +42,19 @@ function OpenWord()
                 mylink.click();
 
 }
+
+/******************************************/
+function bgwhiteone()
+{
+	if (window.confirm('Поменять цвет фона?')==true)
+		{
+	bgwhite();
+	window.alert('Обновите страницу для возвращения к стандартному фону');
+		}
+	else
+	bgblack();
+}
+
+
+
+
