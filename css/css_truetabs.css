@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/***************************
+****************************
+Fonts
+****************************
+***************************/
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+
+/* Page layout */
+body {
+    background: #222;
+    color: #ecf0f1
+}
+.title {
+  font: 3em "Open Sans";
+  text-align: center;
+  text-transform: uppercase
+}
+/**/
+
+
+/***************************
+****************************
+The Foundation
+****************************
+***************************/
+.true-tabs * { 
+	margin: 0; 
+	padding: 0;
+	border:0;
+	background: 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word
+}
+
+.true-tabs {
+    position: relative;
+	font: 300 0px/1.5 "Open Sans Light","Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol",Frutiger,"Frutiger Linotype",HelveticaNeue-Light,"Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: #ecf0f1;
+    width: 100%; /* Modify width here */
+    margin: 0 auto
+}
+
+.true-tabs input {display: none} /* Hides checkboxes */
+
+.true-tabs label {
+	font-size: 16px;
+	line-height: 40px;
+    z-index: 1;
+	display: inline-block;
+    width: 25%;
+	/* Gives an inset look */
+    border: 1px solid #222;
+    border-left-color: #555;
+	/**/
+    text-align: left;
+	cursor: pointer
+}
+
+.true-tabs label span {
+    display: block;
+    background: #404040
+}
+
+.true-tabs label span span {
+    padding: 0 1em;
+    background: 0 0;
+	border: 2px solid transparent;
+    -webkit-transition: border .4s;
+    -moz-transition: border .4s;
+    -o-transition: border .4s;
+    transition: border .4s
+}
+
+.true-tabs input:checked+label {cursor: default}
+
+.true-tabs ul {
+    list-style: none;
+    position: relative;
+    display: block;
+	font-size: 16px  /* Apply font-size */
+}
+
+.true-tabs ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    text-align: left;
+    padding: 1em 1.5em;
+    background: #404040;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    border-top: 1px solid #666;
+    border-right: 1px solid #222;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0
+	/**/
+}
+
+
+/***************************
+****************************
+Color Schemes
+****************************
+***************************/
+
+/* White */
+.color1 input:checked+label span span,
+.color1 label:hover span span,
+.true-tabs input:checked+label span span,
+.true-tabs label:hover span span {
+    border-bottom-color: #ecf0f1
+}
+
+/* Blue */
+.color2 input:checked+label span span, /*контекстный селектор - "input:checked+label span span" только в составе класса color2*/
+/* стиль применится только к выделенному тегу input в составе класса color2 и к соседнему тегу span span в контексте label */
+
+
+.color2 label:hover span span {
+    border-bottom-color: #2980b9
+}
+
+.mytest
+{
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Red */
+.color3 input:checked+label span span,
+.color3 label:hover span span {
+    border-bottom-color: #cc0f16
+}
+
+/* Green */
+.color4 input:checked+label span span,
+.color4 label:hover span span {
+    border-bottom-color: #27ae60
+}
+
+/* Purple */
+.color5 input:checked+label span span,
+.color5 label:hover span span {
+    border-bottom-color: #b075c9
+}
+
+/* Orange */
+.color6 input:checked+label span span,
+.color6 label:hover span span {
+    border-bottom-color: #ff7921
+}
+
+/* Yellow */
+.color7 input:checked+label span span,
+.color7 label:hover span span {
+    border-bottom: 2px solid #e8de2a
+}
+
+
+/***************************
+****************************
+Animations
+****************************
+***************************/
+.true-tabs>.content1:checked~ul>.content1,
+.true-tabs>.content2:checked~ul>.content2,
+.true-tabs>.content3:checked~ul>.content3,
+.true-tabs>.content4:checked~ul>.content4
+/* Used for animations; add more as needed */
+ {
+    position: relative;
+    z-index: 1;
+    opacity: 1;  /* Default - fade effect */
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+}
+
+/* Slide Up */
+.animation1 ul li {
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px)
+}
+
+/* Slide Down */
+.animation2 ul li {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px)
+}
+
+/* Slide Left */
+.animation3 ul li {
+    -webkit-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px)
+}
+
+/* Slide Right */
+.animation4 ul li {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px)
+}
+
+/* Slide Up + Left */
+.animation5 ul li {
+    -webkit-transform: translate(-30px, -30px);
+    -ms-transform: translate(-30px, -30px);
+    transform: translate(-30px, -30px)
+}
+
+/* Slide Up + Right */
+.animation6 ul li {
+    -webkit-transform: translate(30px, -30px);
+    -ms-transform: translate(30px, -30px);
+    transform: translate(30px, -30px)
+}
+
+/* Slide Down + Left */
+.animation7 ul li {
+    -webkit-transform: translate(-30px, 30px);
+    -ms-transform: translate(-30px, 30px);
+    transform: translate(-30px, 30px)
+}
+
+/* Slide Down + Right */
+.animation8 ul li {
+    -webkit-transform: translate(30px, 30px);
+    -ms-transform: translate(30px, 30px);
+    transform: translate(30px, 30px)
+}
+
+/* Flip */
+.animation9 ul {
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%
+}
+.animation9 ul li {
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg)
+}
+
+/* Fix for Vertical */
+.animation9.vleft > ul > li {
+	-o-transform: rotateY(90deg);
+	-ms-transform: rotateY(90deg);
+	-moz-transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg)
+}
+.animation9.vright > ul > li {
+	-o-transform: rotateY(-90deg);
+	-ms-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	-webkit-transform: rotateY(-90deg)
+}
+/**/
+
+
+/***************************
+****************************
+Layouts
+****************************
+***************************/
+
+/* Horizontal Layouts */
+.left label, .center label, .right label { width: auto }
+.left { text-align: left}
+.center {text-align: center}
+.right {text-align: right}
+
+/* Vertical Layouts */
+.vleft > label,
+.vright > label {
+	display: block;
+	width: 25%;
+	float: left;
+	clear: left;
+	margin-right: 0
+}
+.vright > label {
+	float: right;
+	clear: right
+}
+.vleft > ul {margin-left: 25%}
+.vright > ul {margin-right: 25%}
+.vright ul li {
+	-o-transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	-moz-transform-origin: 100% 0%;
+	-webkit-transform-origin: 100% 0%;
+}
+
+
+/***************************
+****************************
+Typography Set
+****************************
+***************************/
+
+/* Headings */
+.true-tabs ul li h1,
+.true-tabs ul li h2,
+.true-tabs ul li h3 {
+	font-weight: 300;
+	line-height: 1.5
+}
+.true-tabs ul li h1 {font-size:48px}
+.true-tabs ul li h2 { font-size:40px}
+.true-tabs ul li h3 {font-size: 32px; text-transform: uppercase}
+/**/
+
+/* Paragraphs */
+.true-tabs ul li p {
+    margin-bottom: 1em;
+    font-size: 1em
+}
+/**/
+
+/* Links */
+.true-tabs ul li a {color: #ecf0f1}
+.true-tabs ul li a:hover,
+.true-tabs ul li a:focus {text-decoration: none}
+.true-tabs ul li a:active { position: relative; top: 1px }
+/**/
+
+/* Citations - Always place at the end of a parapraph*/
+.true-tabs ul li .cite {
+    text-align: right;
+    font-style: italic
+}
+.true-tabs ul li .cite:before {
+    content: "-";
+    margin-right: 5px
+}
+/**/
+
+/* Icon Font - FontAwesome */
+.true-tabs .fa {
+    margin-right: 10px;
+    font-size: 1em /* Icon will always be same size as text */
+}
+/**/
+
+/***************************
+****************************
+Grid System
+****************************
+***************************/
+.true-tabs .grid-row {margin-top: 1em}
+
+/* Clearfix */
+.true-tabs .grid-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/**/
+
+.true-tabs .grid-row:first-child {margin-top: 0}
+
+.true-tabs .grid-column {
+	display: block;
+	float: left;
+	width: 100%;
+	margin-left: 2%
+}
+
+.true-tabs .grid-col:first-child {margin-left: 0}
+
+/* Use these classes with .grid-column - must add up to 9 */
+.true-tabs .grid-column-1 {width: 10%}
+.true-tabs .grid-column-2 {width: 20%}
+.true-tabs .grid-column-3 {width: 30%}
+.true-tabs .grid-column-4 {width: 40%}
+.true-tabs .grid-column-5 {width:50%}
+.true-tabs .grid-column-6 {width: 60%}
+.true-tabs .grid-column-7 {width: 70%}
+.true-tabs .grid-column-8 {width: 80%}
+.true-tabs .grid-column-9 {width: 90%}
+.true-tabs .grid-column-10 {width:100%}
+
+
+@media screen and (max-width: 48em) {
+
+.true-tabs .grid-column,
+.true-tabs .grid-column:first-child {
+		float: none;
+		width: 100%;
+		margin: 20px 0 0 0
+	}
+	
+ .true-tabs > label {
+		display: block;
+		float: none;
+		width:100%;
+		padding-right: 0;
+		padding-left: 0;
+		text-align: left;
+		margin: 0
+	}
+	.true-tabs > ul {
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0
+	}
+	.true-tabs > ul > li {
+		-o-transform-origin: 50% 0%;
+		-ms-transform-origin: 50% 0%;
+		-moz-transform-origin: 50% 0%;
+		-webkit-transform-origin: 50% 0%
+	}
+	.true-tabs.animation9 > ul > li {
+		-webkit-transform: rotateX(-90deg)
+	}
+}
