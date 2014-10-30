@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* ************************************ */
+
+
+/*MM code block*/
+#banner
+{
+	max-width: 100%;
+	text-align: center;
+	-webkit-transition: 3s ease-out 2.5s;
+	-ms-transition: 4s ease-out 3.5s;
+}
+
+#banner:hover::after
+{
+	content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 33%; top: 52%; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    /*background: rgba(255,255,230,0.9);*/ /* Полупрозрачный цвет фона */
+    background: #222;
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 18px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+    color: #ccc;
+}
+#banner-logo
+{
+	margin: 2px 2px 2px 2px;
+	max-width: 71%;
+	-webkit-transition-duration: 1.5s;
+	transition-duration: 1.5s;
+	z-index: -2;
+}
+#banner-logo:hover
+{
+	margin: 0px;
+	max-width: 92%;
+	text-decoration: none;/*for no border after transition */
+	z-index: 1;
+}
+
+#light, #dark
+{
+	margin: 5px auto;
+	float: right;
+}
+
+.block-main{width: 92%; min-width: 50%; float: left; margin: 0px auto; text-align: left;}
+
+.block-left, .block-right
+{
+	width: 45%; margin: 0px auto; text-align: center; float: left;
+	color: black;
+}
+.block-right
+{
+	text-align: center;
+	color: black;
+	float: right;
+	width: 45%;
+}
+
+#wrapper
+{
+width: 1000px;
+margin: 0 auto;
+}
+#wrapper1
+{
+width: 1000px;
+position: relative;
+left: 50%;
+margin-left: -500px;
+}
+
+#content
+{
+	width:1000px;
+	float: right;
+}
+#mainNav
+{
+	width:280px;
+	float: left;
+}
+#footer
+{
+	clear: both;
+}
