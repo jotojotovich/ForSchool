@@ -119,3 +119,23 @@ width:1300px;
 	position: relative;
 	left: -100px;
 }
+
+/* experience 2 */
+#threeCol #primary
+{
+	float: left;
+	width: 270px;
+	margin: 0 0 20px 195px;
+}
+#secondary
+{
+	float: left;
+	width: 270px;
+	margin: 0 0 20px 15px;
+}
+#side
+{
+	float: left;
+	width: 180px;
+	margin: 0 0 20px -750px;
+}

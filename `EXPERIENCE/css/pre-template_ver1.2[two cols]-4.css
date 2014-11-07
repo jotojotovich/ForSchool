@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* ************************************ */
+
+
+/*MM code block*/
+
+/* выводом колонок можно динамически управлять с помощью нисходящих селекторов */
+
+/* experience 4 */
+#wrapper
+{
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px 10px 10px;
+}
+#threeCol #primary
+{
+	float: left;
+	width: 270px;
+	margin: 0 0 20px 195px;
+}
+#secondary
+{
+	float: left;
+	width: 270px;
+	margin: 0 0 20px 15px;
+}
+#side
+{
+	float: left;
+	width: 180px;
+	margin: 0 0 20px -750px;
+}

@@ -1,0 +1,189 @@
+<!-- comments for use -->
+
+<!--
+span id="tc"
+span class="ts"
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXP DARK 4</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/pre-template_ver1.2[two cols]-.css">
+<style type="text/css">
+	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
+	body{background: #444; color: #ccc; transition: 2s;}
+	body:hover{background: #222; color: #ccc;}
+	#tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
+	#tc:hover{border: 1px solid #100;}
+	.tc /*tuning-container*/ {border: 1px solid #f00;} /*show container's border*/
+	.tc:hover{border: 1px solid #100;}
+	.wrapper{font-size: 1.5em;}
+</style>
+<!-- [if IE]
+<style type="text/css">
+@import ("ie.css");
+</style>
+-->
+<script type="text/javascript" src="js/for[exp4].js"></script>
+<style>
+#wrapper
+{
+	width: 1300px;
+	margin: 0 auto;
+	padding: 0 10px 10px 10px;
+}
+#threeCol #primary
+{
+	float: left;
+	width: 370px;
+	margin: 0 0 20px 195px;
+}
+#secondary
+{
+	float: left;
+	width: 670px;
+	margin: 0 0 20px 15px;
+}
+#side
+{
+	float: left;
+	width: 180px;
+	margin: 0 0 20px -1250px;
+}
+#olimpImg
+{
+	position: relative;
+	margin: 0 0 0 -50px;
+	z-index: 0;
+}
+</style>
+<script>
+	function changeWidth(a,b)
+	{
+	document.getElementById('secondary').style.width=a;
+	document.getElementById('side').style.margin=b;
+	}
+</script>
+<script>
+	var oldLayer="" //global var
+	function showLayer(layerName)
+	
+	{
+		//document.layers[layerName].visibility="visible";
+		document.all['secondary'].style.visibility="visible";
+	}
+	function hideLayer(layerName)
+	{
+		// document.layers[layerName].visibility="hidden";
+		document.all['secondary'].style.visibility="hidden";
+	}
+</script>
+<script>
+	var currentFeature="2", currentImg="2";
+	function featureTeaser()
+	{
+		if (currentFeature=="1")
+		{
+          document.all['secondary'].style.visibility="visible";
+          currentFeature="2";
+		}
+		else if (currentFeature=="2")
+		{
+			document.all['secondary'].style.visibility="hidden";
+			currentFeature="1";
+		}
+	}
+	function featureImg()//показать/спрятать изображение
+	{
+		if (currentImg=="1")
+		{
+          document.all['olimp'].style.visibility="visible";
+          currentImg="2";
+		}
+		else if (currentImg=="2")
+		{
+			document.all['olimp'].style.visibility="hidden";
+			currentImg="1";
+		}
+	}
+</script>
+</head>
+<body id="threeCol" class="home">
+<div id="wrapper" class="tc">
+	<div id="primary" class="tc">
+		Content primary<br><hr width="97%">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div id="secondary" class="tc" onclick="changeWidth('750px','0 0 20px -1330px');" ondblclick="changeWidth('670px','0 0 20px -1250px');">
+	Content secondary<br><hr width="97%">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div id="side" class="tc">Content side</div>
+</div>
+<div>
+<a href="javascript:hideLayer('secondary');">close this window</a><br>
+<a href="javascript:showLayer('secondary');">open this window</a>
+</div>
+<div>
+	<a href="javascript: featureTeaser();">layer</a>
+</div>
+<div id="olimp" class="tc">
+	<img src="img/olimpiada2014.png" alt="показать полностью" id="olimpImg" onclick="featureImg();">
+</div>
+<!-- <iframe width="420" height="315" src="//www.youtube.com/embed/xwkQ3d8DoR8" frameborder="0" allowfullscreen>no frames</iframe> -->
+<script>
+		var colorTomato=new Array[3];
+		colorTomato[0]="red";
+		colorTomato[1]="yellow";
+		colorTomato[2]="green";
+		var valueTomato=new Array[3];
+		valueTomato[0]=1;
+		valueTomato[1]=2;
+		valueTomato[2]=3;
+
+	function choiceTomato()
+	{
+		
+		// определены два параллельных массива
+		var selectedTomato=document.getElementById('inputA').value;// взять помидор
+		//var selectedTomato=document.entryForm.entry.value; //взять помидор
+		for (var i=0; i=valueTomato; i++)
+				
+			if (valueTomato==selectedTomato)
+			{alert("Вы держите спелый помидор");}
+			else {alert("Продолжайте выбирать");}
+				 
+				
+		}
+		//var value=document.getElementById('inputA').value;
+		
+		//document.getElementById('output').value=selectedTomato;
+	
+	// function addIt()
+	// {
+	// 	var value=document.getElementById('inputA').value;
+		
+	// 	document.getElementById('output').value=value1;
+	// }
+</script>
+<form action="">
+	<input type="text" name="inputA" id="inputA">
+	<input type="button" name="output" id="output" value="Помидор" onclick="choiceTomato();">
+	<input type="text" name="output" id="output">
+</form>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+div
+{
+	display: block;
+	padding: 5 5 5 5;
+}
+.zen
+{
+	font-size: 25px;
+}
+.main
+{
+	font-family: Verdana;
+}
+
+.block
+{
+background:#f5f5dc;
+border:1px solid #999999;
+padding:20px;
+margin:20px;
+font:11px Verdana;
+float: right; /* added from my head [afmh] */ 
+}
+.block-main
+{
+float: left; width:33%;
+}
+
+/* from school35-vorkuta.ru */
+/* my css ************************* */
+
+.my-p
+{
+font-family: verdana; font-size: 12px; text-align: left;
+}
+
+a#my-a
+{
+text-decoration: none;
+-webkit-transition-duration: 1s;
+-o-transition-duration: 1s;
+-moz-transition-duration: 1s;
+transition-duration: 1s;
+}
+
+a#my-a:hover
+{
+text-decoration: underline;
+color: #333;
+/*font-weight: bold;*/
+font-size: 14px;
+background: #fc0;
+}
+
+
+#cancel-template
+{
+margin: 0px;
+padding: 0px;
+}
+
+
+/* end my css ********************* */
+
+
+/* ************************************************************************************************************ */
+/* by https://www.twitter.github.com/bootstrap */
+.clearfix
+{
+	*zoom: 1;
+	&:befor,
+	&:after
+		{
+			display: table;
+			content: "";
+		}
+	&:after
+	{
+		clear: both;
+	}
+}
+/* /by https://www.twitter.github.com/bootstrap */
+
+h2
+{
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+
+.thumb
+{
+	position: relative;
+	width: 300px;
+	height: 200px;
+	float: left;
+	overflow: hidden;
+	border: 1px solid #eee;
+	.content
+		{
+			position: absolute;
+			top:0; left:0;
+			margin: 30px;
+			color: #eee;
+		}
+}
+.container
+{
+	.clearfix;
+	width: 906px;
+	margin: 10px auto;
+	border: 1px solid #eee;
+	box-shadow: 0 5px 30px fadeout(black, 70%);
+	-moz-box-shadow: 0 5px 30px fadeout(black, 70%);
+
+}
+
+.wrapper
+{
+	position: absolute;
+	top: 0; left: 0;
+	width: 300px;
+	height: 200px;
+	display: none; /* скрыть изображение */
+}
+
+/* Background pattern from subtlepatterns.com */
+body
+
+{
+background-color: hsl(34, 53%, 82%);
+background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,                  
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,                
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px       
+  ),
+repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px, 
+  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,                
+  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px       
+);
+}
+/*{
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+}*/
+
+/*{
+background-color: #fff; 
+background-image: 
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+}*/
+#test
+{
+	border: 1px solid;
+	height: 200px;
+	width: 300px;
+	float: left;
+}
+
+#tr
+{
+	transition: border 0.4s ease 0s;
+}

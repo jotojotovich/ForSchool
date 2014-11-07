@@ -1,0 +1,151 @@
+<!-- comments for use -->
+
+<!--
+span id="tc"
+span class="ts"
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXP DARK 3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/pre-template_ver1.2[two cols]-3.css">
+<style type="text/css">
+	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
+	body{background: #444; color: #ccc; transition: 2s;}
+	body:hover{background: #222; color: #ccc;}
+	#tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
+	#tc:hover{border: 1px solid #100;}
+	.tc /*tuning-container*/ {border: 1px solid #f00;} /*show container's border*/
+	.tc:hover{border: 1px solid #100;}
+	.wrapper{font-size: 1.5em;}
+</style>
+<script type="text/javascript">
+	function done()
+	{
+		setTimeout("alert('Страница загружена... Хелоу)))')", 4000);
+		setTimeout("alert('Есть горячие новости')", 6000);
+		//document.getElementsByTagName('img')[0].innerHTML="<p>иннер</p>";
+	}
+	//передача элементов по id "a" и "b"
+window.onload = function()
+{
+a = document.getElementById("a");
+b = document.getElementById("b");
+} 
+
+//показываем окно функции "showA"
+function showA()
+{
+//Задаем прозрачность и блокируем дисплей
+//элемента "b"
+b.style.filter = "alpha(opacity=80)";
+b.style.opacity = 0.8;
+b.style.display = "block";
+// Задаем блокироваку и отступ сверху в 200px
+//элемента "a"
+a.style.display = "block";
+a.style.top = "200px";
+}
+
+//Вызываем функцию "hideA", которая будет скрывать 
+//окно для элементов "a" и "b"
+function hideA()
+{
+b.style.display = "none";
+a.style.display = "none";
+}     
+</script>
+<!-- [if IE]
+<style type="text/css">
+@import ("ie.css");
+</style>
+-->
+</head>
+<body onload="done();">
+<!-- 
+	<div id="wrapper2">
+		<div id="branding" class="tc">
+			
+		</div>
+		<div id="content" class="tc">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div id="mainNav" class="tc">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+		<div id="footer" class="tc">
+			contacts
+		</div> -->
+<!-- 
+		<div class="tc" id="wrapper" style="height: 200px; width: 1100px;">
+			<div class="tc" style="height: 300px; width: 48%; border-color: gray; float: left; text-align: center;">
+				<img src="img/Rock-Guitar-1600x1000.jpg" alt="" width="475px" id="gtr1">
+
+			</div>
+		</div>
+		<div class="tc" id="wrapper3" style="height: 250px; border-color: gray; float: right;">
+				wrapper3
+
+		</div>
+	</div>
+-->
+<div id="primary" class="tc">
+Content primary<br><hr width="97%">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+<div id="secondary" class="tc">Content secondary</div>
+<div id="side" class="tc">Content side</div>
+
+
+<!-- 3 -->
+
+<div class="exampleDiv" style="border-radius: 50%;-webkit-animation: rainbow 15s 15 linear;-moz-animation: rainbow 15s 15 linear;"></div>
+
+<div id="stage2">
+<div id="box1">#box1</div>
+<div id="box2">#box2</div>
+#stage2
+</div>
+<!--  -->
+<script type="text/javascript">
+	function f()
+	{
+		document.getElementById("oo1").style.width="70%";
+		document.write('<br>'+navigator.appVersion);
+	}	
+</script>
+<!--  -->
+<img src="img/oowriter0.png" width="65%" id="oo1" name="oo1"><br>
+<input type="button" name="btn1" id="btn1" value="push me" onclick="f();">
+<!--  -->
+<script type="text/javascript">
+	document.write('<br>'+navigator.appVersion);
+	document.write('<br>'+navigator.appName);
+</script>
+<a href="#" onclick="showA();" class="pages">Открыть</a>
+
+<div id="a"><div id="windows">
+<!-- Ваш текст -->
+<a href="#" onclick="hideA();" class="pages" 
+style="float: right;">Закрыть</a>
+</div></div>
+
+<div id="b"></div>
+
+</body>
+</html>
