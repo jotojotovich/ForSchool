@@ -1,0 +1,704 @@
+@charset "UTF-8";
+
+/* Page layout */
+
+body {
+    background: #222;
+    color: #ecf0f1;
+    margin-top: 1em
+}
+/**/
+
+/* -----------------------------------*/
+
+/* ---------->>> Foundation <<<-----------
+This is where most of the code that makes the tabs function appear, as well as basic styling. You can use this section to play around with the basic colors and fonts.
+/* -----------------------------------*/
+
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+
+/* ->>> Reset <<<-*/
+
+.night-tabs ul,
+.night-tabs label,
+.night-tabs span,
+.night-tabs div,
+.night-tabs h1,
+.night-tabs h2,
+.night-tabs h3,
+.night-tabs p,
+.night-tabs a,
+.night-tabs em,
+.night-tabs img,
+.night-tabs ol,
+.night-tabs ul,
+.night-tabs li {
+    /* Structure */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    /* Colors */
+    background: 0 0;
+    /* CSS3 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.night-tabs {
+    /* Structure */
+    margin: 0 auto;
+    position: relative;
+    /* ->>> Modify Width <<<-*/
+    width: 90%;
+    /* Typography */
+    font: 300 0px/1.5 "Open Sans", "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", Frutiger, "Frutiger Linotype", HelveticaNeue-Light, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    /* Colors */
+    color: #ecf0f1
+}
+.night-tabs input {
+    display: none
+}
+/* ->>> Hide Checkboxes <<<-*/
+
+.night-tabs label {
+    /* Structure */
+    display: inline-block;
+    z-index: 1;
+    /* ->>> Border Separator <<<-*/
+    border-bottom: 2px solid #353535;
+  border-left: 1px solid #444;
+  border-right: 1px solid #222;
+    /* Typography */
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: left;
+    /* CSS3 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+.night-tabs label span {
+    /* Structure */
+    display: block;
+    padding: .2em;
+    /* Colors */
+    background: #404040
+}
+.night-tabs label span span {
+    /* Structure */
+    border: 2px solid transparent;
+    padding: 0 1em;
+    /* CSS3*/
+    -webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    -o-transition: background .4s;
+    transition: background .4s
+}
+.night-tabs input:checked+label {
+    cursor: default
+}
+.night-tabs .night-tabs-content {
+    /* Structure */
+    display: block;
+    position: relative;
+    /* Typography */
+    font-size: 18px;
+    list-style: none
+}
+.night-tabs .night-tabs-content > li {
+    /* Structure */
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    padding: 1em 1.5em;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    /* Typography */
+    text-align: left;
+    /* Color */
+    background: #404040;
+    /* CSS3 */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s
+}
+/* -----------------------------------*/
+
+/* ---------->>> Colors <<<-----------
+There are 12 preset modern color schemes. You can use the ones made for you, but you can also edit it and make your own custom color scheme. Simply remove all the other colors and keep the default to modify.
+/* -----------------------------------*/
+
+/* ->>> Default <<<-*/
+
+.night-tabs label:hover span span,
+.night-tabs input:checked+label span span {
+    background: #6c7a89
+}
+/* ->>> Blue <<<-*/
+
+.night-tabs-color-blue label:hover span span,
+.night-tabs-color-blue input:checked+label span span {
+    background: #1e8bc3
+}
+/* ->>> Red <<<-*/
+
+.night-tabs-color-red label:hover span span,
+.night-tabs-color-red input:checked+label span span {
+    background: #ef4836
+}
+/* ->>> Green <<<-*/
+
+.night-tabs-color-green label:hover span span,
+.night-tabs-color-green input:checked+label span span {
+    background: #27ae60
+}
+/* ->>> Purple <<<-*/
+
+.night-tabs-color-purple label:hover span span,
+.night-tabs-color-purple input:checked+label span span {
+    background: #9b59b6
+}
+/* ->>> Orange <<<-*/
+
+.night-tabs-color-orange label:hover span span,
+.night-tabs-color-orange input:checked+label span span {
+    background: #F9690E
+}
+/* ->>> Yellow <<<-*/
+
+.night-tabs-color-yellow label:hover span span,
+.night-tabs-color-yellow input:checked+label span span {
+    background: #a8880a
+}
+/* ->>> Pink <<<-*/
+
+.night-tabs-color-pink label:hover span span,
+.night-tabs-color-pink input:checked+label span span {
+    background: #dB0a5b
+}
+/* ->>> Brown <<<-*/
+
+.night-tabs-color-brown label:hover span span,
+.night-tabs-color-brown input:checked+label span span {
+    background: #926239
+}
+
+/* ->>> Teal <<<-*/
+
+.night-tabs-color-teal label:hover span span,
+.night-tabs-color-teal input:checked+label span span {
+    background: #008080
+}
+
+/* ->>> Turquoise <<<-*/
+
+.night-tabs-color-turquoise label:hover span span,
+.night-tabs-color-turquoise input:checked+label span span {
+    background: #16a085
+}/* -----------------------------------*/
+
+/* ---------->>> Animations <<<-----------
+This is where you can find the code used for the tab effects.
+ You can use the existing effects, change their intensity, or make your own. 
+ By default, there is a fade effect implemented if you don't use any special effects.
+/* -----------------------------------*/
+
+.night-tabs>.content1:checked~ul>.content1,
+.night-tabs>.content2:checked~ul>.content2,
+.night-tabs>.content3:checked~ul>.content3,
+.night-tabs>.content4:checked~ul>.content4
+/* ->>> Used for animations <<<-*/
+
+{
+    /* Structure */
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    /* CSS3 */
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none
+}
+/* ->>> Slide Up <<<-*/
+
+.night-tabs-animation-slide-up .night-tabs-content > li {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px)
+}
+/* ->>> Slide Down <<<-*/
+
+.night-tabs-slide-down .night-tabs-content > li {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px)
+}
+/* ->>> Slide Left <<<-*/
+
+.night-tabs-animation-slide-left .night-tabs-content > li {
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
+    transform: translateX(-30px)
+}
+/* ->>> Slide Right <<<-*/
+
+.night-tabs-animation-slide-right .night-tabs-content > li {
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    transform: translateX(30px)
+}
+/* ->>> Slide Up + Left <<<-*/
+
+.night-tabs-slide-up-left .night-tabs-content > li {
+    -webkit-transform: translate(-30px, -30px);
+    -moz-transform: translate(-30px, -30px);
+    -ms-transform: translate(-30px, -30px);
+    -o-transform: translate(-30px, -30px);
+    transform: translate(-30px, -30px)
+}
+/* ->>> Slide Up + Right <<<-*/
+
+.night-tabs-animation-slide-up-right .night-tabs-content > li {
+    -webkit-transform: translate(30px, -30px);
+    -moz-transform: translate(30px, -30px);
+    -ms-transform: translate(30px, -30px);
+    -o-transform: translate(30px, -30px);
+    transform: translate(30px, -30px)
+}
+/* ->>> Slide Down + Left <<<-*/
+
+.night-tabs-animation-slide-down-left .night-tabs-content > li {
+    -webkit-transform: translate(-30px, 30px);
+    -moz-transform: translate(-30px, 30px);
+    -ms-transform: translate(-30px, 30px);
+    -o-transform: translate(-30px, 30px);
+    transform: translate(-30px, 30px)
+}
+/* ->>> Slide Down + Right <<<-*/
+
+.night-tabs-animation-slide-down-right .night-tabs-content > li {
+    -webkit-transform: translate(30px, 30px);
+    -moz-transform: translate(30px, 30px);
+    -ms-transform: translate(30px, 30px);
+    -o-transform: translate(30px, 30px);
+    transform: translate(30px, 30px)
+}
+/* ->>> Rotate <<<-*/
+
+.night-tabs-rotate > ul > li {
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg)
+}
+.night-tabs-animation-rotate.night-tabs.night-tabs-position-vleft > ul > li,
+.night-tabs-animation-rotate.night-tabs.night-tabs-position-vright > ul > li {
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg)
+}
+/* ->>> Scale <<<-*/
+
+.night-tabs-animation-scale > ul > li {
+    -webkit-transform: scale(0.6, 0.6);
+    -moz-transform: scale(0.6, 0.6);
+    -ms-transform: scale(0.6, 0.6);
+    -o-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6)
+}
+/* ->>> Flip <<<-*/
+
+.night-tabs-animation-flip .night-tabs-content {
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%
+}
+.night-tabs-animation-flip .night-tabs-content > li {
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg)
+}
+.night-tabs-animation-flip.night-tabs-position-vleft > .night-tabs-content > li {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    transform: rotateY(90deg)
+}
+.night-tabs-animation-flip.night-tabs-position-vright > .night-tabs-content > li {
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    transform: rotateY(-90deg)
+}
+/* -----------------------------------*/
+
+/* ---------->>> Layouts <<<-----------
+There are 6 preset layouts that should fufill most of your needs. However, if you need to edit it, such as adding more jusitified tabs, then you can do so here.
+/* -----------------------------------*/
+
+/* ->>> Horizontal <<<-*/
+
+.night-tabs-position-left label,
+.night-tabs-position-center label,
+.night-tabs-position-right label {
+    width: auto
+}
+.night-tabs-position-left {
+    text-align: left
+}
+.night-tabs-position-center {
+    text-align: center
+}
+.night-tabs-position-right {
+    text-align: right
+}
+.night-tabs-position-justify2 > label {
+    width: 50%
+}
+.night-tabs-position-justify3 > label {
+    width: 33.33%
+}
+.night-tabs-position-justify4 > label {
+    width: 25%
+}
+.night-tabs-position-justify > input:first-child + label {
+    padding-left: 0
+}
+/* ->>> Vertical <<<-*/
+
+.night-tabs-position-vleft .night-tabs-content > li,
+.night-tabs-position-vright .night-tabs-content > li {
+    border-top: 0
+}
+.night-tabs-position-vleft > label,
+.night-tabs-position-vright > label {
+    display: block;
+    width: 25%;
+    float: left;
+    clear: left;
+    margin-right: 0
+}
+.night-tabs-position-vright > label {
+    float: right;
+    clear: right
+}
+.night-tabs-position-vright ul li {
+    border-right: 1px solid #333
+}
+.night-tabs-position-vleft > .night-tabs-content {
+    margin-left: 25%
+}
+.night-tabs-position-vright > .night-tabs-content {
+    margin-right: 25%
+}
+.night-tabs-position-vright .night-tabs-content > li {
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    transform-origin: 100% 0%
+}
+/* -----------------------------------*/
+
+/* ---------->>> Typography <<<-----------
+The typography section contains most of the styles you need for basic headings, paragraphs, lists, links, and images. There is even a simple grid system preloaded for you to use, as well as utility classes
+/* -----------------------------------*/
+
+/* ->>> Headings <<<-*/
+
+.night-tabs .night-tabs-content li h1,
+.night-tabs .night-tabs-content li h2,
+.night-tabs .night-tabs-content li h3 {
+    font-weight: 300;
+    line-height: 1.5
+}
+.night-tabs .night-tabs-content li h1 {
+    font-size: 3em
+}
+.night-tabs .night-tabs-content li h2 {
+    font-size: 2.2em
+}
+.night-tabs .night-tabs-content li h3 {
+    font-size: 1.4em;
+    text-transform: uppercase
+}
+/* ->>> Paragraphs <<<-*/
+
+.night-tabs .night-tabs-content li p {
+    margin-bottom: 1em;
+    font-size: 1em
+}
+/* ->>> Images <<<-*/
+
+.night-tabs .night-tabs-content li img {
+    max-width: 100%;
+    height: auto
+}
+/* ->>> Links <<<-*/
+
+.night-tabs .night-tabs-content li a {
+    color: #ecf0f1
+}
+.night-tabs .night-tabs-content li a:hover,
+.night-tabs .night-tabs-content li a:focus {
+    text-decoration: none
+}
+.night-tabs .night-tabs-content li a:active {
+    position: relative;
+    top: 1px
+}
+/* ->>> FontAwesome <<<-*/
+
+.night-tabs .fa {
+    margin-right: 1em;
+    font-size: 1em
+}
+/* ->>> Lists <<<-*/
+
+.night-tabs .night-tabs-ordered-list,
+.night-tabs .night-tabs-unordered-list {
+    margin-top: .3em;
+    padding-left: 2.5em
+}
+.night-tabs .night-tabs-ordered-list {
+    list-style: decimal
+}
+.night-tabs .night-tabs-unordered-list {
+    list-style: disc
+}
+/* ->>> Utility <<<-*/
+
+.text-center {
+    text-align: center
+}
+.text-left {
+    text-align: left
+}
+.text-right {
+    text-align: right
+}
+.pull-left {
+    float: left
+}
+.pull-right {
+    float: right
+}
+/* -----------------------------------*/
+
+/* ---------->>> Grid System <<<-----------*/
+
+/* -----------------------------------*/
+
+.night-tabs .grid-row {
+    margin-top: 1em
+}
+/* ->>> Clearfix <<<-*/
+
+.night-tabs .grid-row:after {
+    content: '';
+    display: table;
+    clear: both
+}
+.night-tabs .grid-row:first-child {
+    margin-top: 0
+}
+.night-tabs .grid-column {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-left: 2%
+}
+.night-tabs .grid-column:first-child {
+    margin-left: 0
+}
+/* ->>> Use with .grid-column - Must add to 12 <<<-*/
+
+.night-tabs .grid-column-1 {
+    width: 6.5%
+}
+.night-tabs .grid-column-2 {
+    width: 15%
+}
+.night-tabs .grid-column-3 {
+    width: 23.5%
+}
+.night-tabs .grid-column-4 {
+    width: 32%
+}
+.night-tabs .grid-column-5 {
+    width: 40.5%
+}
+.night-tabs .grid-column-6 {
+    width: 49%
+}
+.night-tabs .grid-column-7 {
+    width: 57.5%
+}
+.night-tabs .grid-column-8 {
+    width: 66%
+}
+.night-tabs .grid-column-9 {
+    width: 74.5%
+}
+.night-tabs .grid-column-10 {
+    width: 83%
+}
+.night-tabs .grid-column-11 {
+    width: 91.5%
+}
+@media screen and (max-width: 48em) {
+    .night-tabs .grid-column,
+    .night-tabs .grid-column:first-child {
+        float: none;
+        width: 100%;
+        margin: 1em 0 0 0
+    }
+    .night-tabs > label {
+        display: block;
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: left;
+        margin: 0
+    }
+    .night-tabs > .night-tabs-content {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0
+    }
+    .night-tabs > .night-tabs-content > li {
+        -webkit-transform-origin: 50% 0%;
+        -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+        -o-transform-origin: 50% 0%;
+        transform-origin: 50% 0%
+    }
+    .night-tabs.night-tabs-animation-flip > ul > li {
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg)
+    }
+}
+
+/*my css*/
+#wrapper
+{
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px 10px 10px;
+}
+#threeCol #primary
+{
+    float: left;
+    width: 370px;
+    margin: 0 0 20px 195px;
+}
+#secondary
+{
+    float: left;
+    width: 670px;
+    margin: 0 0 20px 15px;
+}
+#side
+{
+    float: left;
+    width: 180px;
+    margin: 0 0 20px -1250px;
+}
+
+ img {
+    display: none;
+    transition: 5s;
+    transform: scale(0.6, 0.6);
+   }
+   .slow {
+    display: none;
+    transition: 5s;
+    /*transform: scale(0.6, 0.6)*/
+   }
+   #switch:checked~img
+   {
+    /*display: block;*/
+    display: inline-block;
+    z-index: 1;
+    /* ->>> Border Separator <<<-*/
+    border-bottom: 2px solid #353535;
+  border-left: 1px solid #444;
+  border-right: 1px solid #222;
+    /* Typography */
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: left;
+    /* CSS3 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+   }
+
+#switch:checked~.slow
+   {
+    /*display: block;
+    transform: scale(0.4, 2.2);*/
+    /*transform: rotate(-90deg);*/
+    display: inline-block;
+    z-index: 1;
+    /* ->>> Border Separator <<<-*/
+    border-bottom: 2px solid #353535;
+  border-left: 1px solid #444;
+  border-right: 1px solid #222;
+    /* Typography */
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: left;
+    /* CSS3 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+   }
+   a 
+   {
+    text-decoration: none;
+    color: #ccc;
+    transition: 1s;
+   }
+   a:hover
+   {
+    color: #777;
+    font-size: 14px;
+   }
+   h2 {transition: 1s;}
+   h2:hover
+   {
+     color: red;
+     cursor: pointer;
+     font-size: 36px;
+     transform: rotateX(90deg);
+   }
