@@ -14,8 +14,8 @@ span class="ts"
 	<meta charset="utf-8">
 <style type="text/css">
 	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 18px;}
-	body{background: #444; color: #ccc; transition: 2.5s; background: url(img/bg2.jpg) no-repeat; background-size: cover; background-position: center; opacity: 0.5;}
-	body:hover{background: #222; color: #ccc; opacity: 1}
+	.body{background: #444; color: #ccc; transition: 2s; /*background: url(img/bg2.jpg) no-repeat;*/ /*background-size: cover; background-position: center;*/opacity: 0.5;}
+	/*.body:hover{background: #222; color: #ccc; opacity: 1; }*/
 	#tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
 	#tc:hover{border: 1px solid #100;}
 	.tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
@@ -33,7 +33,7 @@ h1 {
 }
 </style>
 </head>
-<body id="second">
+<body class="body" id="second">
 	<h1 class="tc">
 <span style="font-size: 80px; color: #f00; font-family: 'Neucha', cursive;">STOP</span> <span style="font-size: 80px; color: rgba(0,0,0,0.5); font-family: 'Neucha', cursive;">SPICE!</span>
 	</h1>
@@ -61,6 +61,9 @@ h1 {
 	<img src="img/bg2.jpg" alt="" width="30%" id="first">
 	</div>
 </div>
+<article id="content"></article>
+<div id="content1"></div>
+<div id="mydiv">Old text</div>
 <script>
 	$("#first").click(function()
 {
@@ -74,6 +77,45 @@ h1 {
     	$("#second").show(500);
     }
 );
+	$("<div><p>Ба-бах!</p></div>").appendTo("#content");
+	$("<div><p>Ба-бах!</p></div>").appendTo("#content1");
+	
+	// $("#mydiv")
+ //  .animate({height: "hide"}, 300)
+ //  .text("Новый текст")
+ //  .animate({height: "show"}, 300);
+
+  // **************************************
+
+  $(document).ready(init);
+  function init()
+  {
+  	$(".body").css
+  	(
+  		{background: "url(img/bg2.jpg) no-repeat"}
+  	);
+  	$(".body").css("background-position", "center");
+  	$(".body").css("background-size", "cover");
+  }
+//***************************************
+$("#mydiv").click(function()
+{
+$("#mydiv")
+  .animate({height: "hide"}, 300)
+  .text("Новый текст")
+  .animate({height: "show"}, 300);	
+}
+
+	);
+
+$(".body").hover(
+function()
+{
+$(this).css({"background: #222"});
+}
+ );
+
+
 </script>
 </body>
 </html>
