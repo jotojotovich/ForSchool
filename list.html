@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/list.js"></script>
+<!-- <script src="giseo.rkomi.ru/asp/Calendar/WeekViewTime.asp"></script> -->
+	<title></title>
+	<style>
+	h1{
+		color: red;
+		text-align: center;
+	}
+	</style>
+<script>
+	var newWindow; //глобальная переменная
+       function makeNewWindow()
+       {
+       	newWindow = window.open("","","status,height=300,width=1000");
+       }
+       function subWrite()
+       {
+				       if (newWindow.closed)// если кто-то закрыл окно, снова его открыть, вызвав функцию
+				       {
+				       makeNewWindow();
+				       }
+
+		       newWindow.focus();// вывод на передний план
+		       //вызов содержимого для нового окна
+		       var newContent = "<html><head><title>A new doc</title></head>";
+		       newContent += "<body bgcolor='coral'><h1>Знания - это информация(данные), которую Вы можете использовать повторно</h1><a href='http://ya.ru'>ya.ru</a>"
+		       newContent += "</body></html>";
+		       //Запись HTML в новый документ окна
+		       newWindow.document.write(newContent);
+		       newWindow.document.close();// Закрытие потока
+      }
+</script>
+
+</head>
+<body onload="makeNewWindow();">
+
+   <!-- <div class="kh-bg-layer-zero" style="font-size: 12pt; width: 100px;">
+					<p style="text-align: center; background: #555; color: #ccc;">
+					<span style="font-size: 20pt;"><strong>Мы открыли новый сайт!!!</strong></span>
+					</p>
+					<hr id="system-readmore" />
+					<p>Сегодня открылся наш новый сайт!</p>
+			</div>
+			<div class="kh-bg-layer-zero">kh-bg</div> -->
+
+
+
+<img src="img/sun1.png" id="sun1" name="sun1" style="padding-top: 150px; padding-left: 50px;">
+<form>
+	<input type="button" onclick="reWrite();" value="Replace"></form>
+	<!-- ********************************************* -->
+<script>
+// while (notDone()) {
+//   if (isPathForward()) {
+//     moveForward();
+//   } else {
+//     turnLeft();
+//   }
+//   if (isPathForward()) {
+//     moveForward();
+//   } else {
+//     turnLeft();
+//   }
+// }
+</script>
+<form action="">
+	<input type="button" value="click me" onclick="showMsg('The button has been clicked!')">
+</form>
+
+<!-- форма для вызова функции использование document.write в новом окне -->
+<form action="">
+	<input type="button" value="new window" onclick="subWrite();">
+</form>
+
+<!-- video -->
+   <!-- <video width="640" height="360" controls="controls"> -->
+   <!-- <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
+   <!-- <source src="video/convert1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+   <!-- <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'> -->
+   <!-- </video> -->
+
+<script>
+		function brDesc()
+			{
+				var br = "<br>"
+				for (i=0; i<=8; i++)
+				document.write(br);
+				document.write("<hr>")
+			}
+			document.write("veveel".length)
+</script>
+<form action="">
+	<input type="button" value="BR" onclick="brDesc();">
+<h1>HELLO, ALL!!! AGAIN</h1>
+</form>
+<menu type="toolbar">
+	 <li>
+	 	<menu>
+	 		<button onclick="subWrite();">subWrite</button>
+	 		<button onclick="openLastNews();">Самая последняя новость</button>
+	 		<button></button>
+	 	</menu>
+	 </li>
+	 <li>
+	 	<menu>
+	 		<button></button>
+	 		<button></button>
+	 		<button></button>
+	 	</menu>
+	 </li>
+</menu>
+</body>
+</html>
+<!-- <a href="https://giseo.rkomi.ru/asp/Calendar/WeekViewTime.asp">Расписание</a>
+
+<form action="/asp/Calendar/DayView.asp" method="post" name="View"> -->
+<script>
+// while (notDone()) {
+//   if (isPathForward()) {
+//     moveForward();
+//   } else {
+//     turnLeft();
+//   }
+//   if (isPathForward()) {
+//     moveForward();
+//   } else {
+//     turnLeft();
+//   }
+// }
+</script>

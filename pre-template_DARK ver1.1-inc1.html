@@ -9,6 +9,23 @@ span class="ts"
 <head>
 	<title>INK1 pre-template DARK</title>
 	<script src="jquery/jquery-2.1.1.js"></script> <!-- local script's library -->
+	<script src="js/navigator.js"></script>
+	<script src="js/default.js"></script>
+	<!-- WinJS style sheets (include one) -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet">
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet">
+
+    <!-- WinJS code -->
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <!-- WinJS style sheets (include one) -->
+    <link rel="stylesheet" href="//Microsoft.WinJS.2.0/css/ui-dark.css" />
+    <link rel="stylesheet" href="//Microsoft.WinJS.2.0/css/ui-light.css" />
+
+    <!-- WinJS code -->
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+    <!-- -->
 	<meta charset="utf-8">
 <style type="text/css">
 	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
@@ -87,6 +104,11 @@ span class="ts"
 	</div>
 -->
 
+<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: 'list.html'}">
+		
+	</div>
+
+
 	<!-- step 1 -->
 	<div id="wrapper">
 	    
@@ -125,6 +147,98 @@ span class="ts"
 	    $(this).show(1000);
 	}
 	);
+	var speech1 = "Hello, world!";
+	var speaker1 = "John";
+	var speaker2= "Paul";
+	if (speaker1=="John")
+	{
+		alert(speech1);
+	}
+	if (speaker2=="John")
+	{
+		alert(speech1);
+	}
+	else {
+		alert("i'm Paul and i don't speak this))");
+	}
+	for (i="John"; i=="John"; i=!i)
+		{ 
+			document.write("Dlinna "+i.length+"<br>");
+			if(i=="John")
+			{alert("Hello, my dear");}
+			else {alert("Who am i?");}
+		}
+
+			if (i!="John")
+			{
+				alert("I'm John, now i'm "+i);
+			}
+			else {alert("But i'm "+i);}
+			document.write("Dlinna "+i.length);
+
+			var myAr = new Array();
+			myAr[0]="John";
+			myAr[1]="Paul";
+			myAr[2]="George";
+			myAr[3]="Ringo";
+			var group = new Array(myAr[0]+myAr[1]+myAr[2]+myAr[3],"brain epstain", "George Martin");
+			document.write("<br>beatles is: "+group+"<br>");
+			document.write(group[1]," ",group[2]+"<br>");
+			document.write("длина var group: "+group.length);
+			for (i=0; i<=3; i++)
+			{
+				document.write("<br>массив "+myAr[i]+"<br>");
+				// ****************************
+				document.write("значение var i сейчас: "+i+"<br>");
+      			document.write(myAr[i]+"<br>");
+      			document.write("длина массива сейчас: "+myAr[i].length+"<br>");
+			}
+
+			document.write(i+"<br>");
+			document.write(myAr[i]);
+
+
+		
+
+
 	</script>
+
+	<p style="text-align: center;"><span style="font-size: small;"><strong>Старшеклассники, внимание!</strong></span></p>
+<p style="text-align: center;"><span style="font-size: small;"><strong> </strong></span></p>
+<hr id="system-readmore" />
+<p style="line-height: 15.8079996109009px;" align="center"><strong><span style="font-size: small;">Уважаемые старшеклассники!</span></strong></p>
+<p style="line-height: 15.8079996109009px;"><span style="font-size: small;">В рамках проведения акции «Остановите СПИД», посвященной Всемирному дню борьбы со СПИДом, отдел по работе с молодежью проводит анонимное Интернет – анкетирование молодежи.</span></p>
+<p style="line-height: 15.8079996109009px;"><span style="font-size: small;">Желающие принять участие могут найти <a href="https://docs.google.com/forms/d/1Gyul5QrXV1nNQZO2_fhNkuYW1IRp5399J80m4py3etY/viewform?c=0&amp;w=1" target="_blank">анкету</a> на кнопке</span><span style="font-size: small;"> </span><input onclick="fAidsStopForm();" type="button" value="Анкета" /></p>
+<p> </p>
+<p style="line-height: 15.8079996109009px;"><strong><span style="font-size: small;">Ответы принимаются до 15.00 5 декабря 2014 г.</span></strong></p>
+<p style="line-height: 15.8079996109009px;"> </p>
+<div class="my-descriptor">
+<p style="line-height: 15.8079996109009px; text-align: center;"><strong><span style="font-size: small;"> <img src="images/news/news021214/1600x.jpg" border="0" width="500" height="571" /><br /></span></strong></p>
+</div>
+<div class="my-descriptor"><form style="text-align: center; float: right;"> <input style="background-color: red; color: white; width: 75px; height: 20px;" onclick="f1600x();" type="button" value="Картинка" /> </form></div>
+<p> </p>
+<p> </p>
+<script type="text/javascript">// <![CDATA[
+function f1600x(){
+var aidsStop="http://school35-vorkuta.ru/images/news/news021214/1600x.jpg";
+window.open(aidsStop,"_blank","width=1000,height=600");
+}
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+function fAidsStopForm(){
+var aidsStopForm="https://docs.google.com/forms/d/1Gyul5QrXV1nNQZO2_fhNkuYW1IRp5399J80m4py3etY/viewform?c=0&w=1";
+window.open(aidsStopForm,"_blank","");
+}
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+var letterEge = window.open("http://school35-vorkuta.ru/jdownloads/PDF/ege/letter-about-EGE-2015.pdf","_blank","");
+if (!letterEge)
+{
+alert("Если Вы видите это сообщение, ваш браузер запретил всплывающие окна. Разрешите браузеру отображать всплывающие окна и обновите страницу, либо кликните по ссылке");
+}
+// ]]></script>
+<p><a href="jdownloads/PDF/ege/letter-about-EGE-2015.pdf" target="_blank">Об изменениях в Порядок проведения итоговой аттестации</a></p>
+	
 </body>
 </html>
