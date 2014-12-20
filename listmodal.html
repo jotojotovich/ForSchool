@@ -13,9 +13,9 @@
 	border: 3px #000 solid;
 	background: #fff;
 	position: fixed; /* чтобы окно было в видимой зоне в любом месте */
-	top: 45%; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
-	left: 50%; /* половина экрана слева */
-	margin-top: -150px;
+	top: 0; /* отступаем сверху 45%, остальные 5% подвинет скрипт */
+	left: 33%; /* половина экрана слева */
+	margin-top: -250px;
 	margin-left: -150px; /* тут вся магия центровки css, отступаем влево и вверх минус половину ширины и высоты соответственно =) */
 	display: none; /* в обычном состоянии окна не должно быть */
 	opacity: 0; /* полностью прозрачно для анимирования */
@@ -51,7 +51,7 @@ $(document).ready(function() { // вся магия после загрузки 
 	$('a#go').click( function(event){ // ловим клик по ссылки с id="go"
 		event.preventDefault(); // выключаем стандартную роль элемента
 		$('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
-		 	function(){ // после выполнения предъидущей анимации
+		 	function(){ // после выполнения предыдущей анимации
 				$('#modal_form') 
 					.css('display', 'block') // убираем у модального окна display: none;
 					.animate({opacity: 1, top: '50%'}, 200); // плавно прибавляем прозрачность одновременно со съезжанием вниз
@@ -78,21 +78,21 @@ $(document).ready(function() { // вся магия после загрузки 
 <!-- Модальное окно -->
 <!-- <div id="modal_form">
 	<span id="modal_close">X</span>
-																																												<form action="" method="post">
-																																													<h3>Простое модальное окно</h3>
-																																													<p>Тут может быть рандомная обычная форма например.</p>
-																																													<p>Ваше имя<br />
-																																														<input type="text" name="your-name" value="" size="40" />
-																																													</p>
-																																													<p>Ваш телефон<br />
-																																														<input type="text" name="your-name" value="" size="40" />
-																																													</p>
-																																													<p style="text-align: center; padding-bottom: 10px;">
-																																														<input type="submit" value="Отправить" />
-																																													</p>
-																																												</form>
-																																						<a href="#">Modal</a>						
-</div>
+	<form action="" method="post">
+	<h3>Простое модальное окно</h3>
+	<p>Тут может быть рандомная обычная форма например.</p>
+	<p>Ваше имя<br />
+	<input type="text" name="your-name" value="" size="40" />
+	</p>
+	<p>Ваш телефон<br />
+	<input type="text" name="your-name" value="" size="40" />
+	</p>
+	<p style="text-align: center; padding-bottom: 10px;">
+	<input type="submit" value="Отправить" />
+	</p>
+	</form>
+	<a href="#">Modal</a>
+	</div>
 <div id="overlay"></div> -->
 
 <!-- insert from site -->
@@ -100,7 +100,7 @@ $(document).ready(function() { // вся магия после загрузки 
       <span id="modal_close">X</span> <!-- Кнопка закрыть --> 
       <!-- Тут любое содержимое -->
       <!-- <a href="#">Modal</a> -->
-      <img src="img/bg1.jpg" width="700px" height="524px" alt="">
+      <!-- <img src="img/bg1.jpg" width="700px" height="524px" alt=""> -->
 </div>
 <div id="overlay"></div><!-- Подложка -->
 

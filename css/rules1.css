@@ -1,0 +1,80 @@
+
+	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
+	body{background: #444; color: #ccc; transition: 2s;}
+	body:hover{background: #222; color: #ccc;}
+	#tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
+	#tc:hover{border: 1px solid #100;}
+	.tc /*tuning-container*/ {border: 1px solid #f00;} /*show container's border*/
+	.tc:hover{border: 1px solid #100;}
+	.wrapper{font-size: 1.5em;}
+	/* point zero */
+	.header
+	{
+		width: 100%;
+		height: 60px;
+		background: #00ffcc;
+		color: #000;
+        float: left;
+		font-size: 20pt;
+	}
+	#threeColLayout #primaryContent
+	{
+		float: left;
+		width: 270px;
+		margin: 0 0 20px 195px;
+		font-size: 20px;
+		border: 1px solid;
+		height: 1000px;
+		
+	}
+    #secondaryContent
+	{
+		float: left;
+		width: 770px;
+		margin: 0 0 20px 15px;
+		font-size: 20pt;
+		border: 1px solid;
+		height: 1000px;
+		
+	}
+	#sideContent
+	{
+		float: left;
+		width: 180px;
+		margin: 0 0 20px -1250px;
+		border: 1px solid;
+		height: 1000px;
+	}
+
+#footer
+{
+	width: 100%;
+		height: 150px;
+		background: #00ffcc;
+		color: #000;
+        float: left;
+		font-size: 20pt;
+}
+.videoInSecondary
+{
+	margin-top: 50px;
+	width: 770px;
+	position: absolute;
+	
+	
+}
+.videoInSecondary1
+{
+	margin-top: 550px;
+	width: 770px;
+	position: absolute;
+	
+	
+}
+.mainMenu
+{
+	color: #ccc;
+	font-size: 15px;
+	text-decoration: none;
+	
+}

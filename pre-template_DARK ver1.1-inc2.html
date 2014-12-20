@@ -1,0 +1,116 @@
+<!-- comments for use -->
+
+<!--
+span id="tc"
+span class="ts"
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pre-template DARK</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/rules1.css">
+	<script type="text/javascript" src="jquery/jquery-2.1.1.js"></script>
+<style type="text/css">
+	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
+	body{background: #444; color: #ccc; transition: 2s;}
+	body:hover{background: #222; color: #ccc;}
+	#tc /*tuning-container*/ {border: 1px solid #f00; transition: 10s;} /*show container's border*/
+	#tc:hover{border: 1px solid #100;}
+	.tc /*tuning-container*/ {border: 1px solid #f00;} /*show container's border*/
+	.tc:hover{border: 1px solid #100;}
+	.wrapper{font-size: 1.5em;}
+	/* point zero */
+	
+</style>
+<!-- jQuery -->
+
+
+
+<!-- end jQuery -->
+</head>
+<body id="threeColLayout">
+	<div class="tc wrapper">
+	pre-template-dark
+	</div>
+	<header>
+		<div class="header">
+			Header
+		</div>
+	</header>
+		<!-- -->
+		<main>
+		<script>
+	
+     $("#news").click(function()
+     {
+     $("#primaryContent").load("news1.html");
+     }
+     	)//-2
+	$.ajaxSetup({
+  cache: false
+});
+</script>
+		<div id="primaryContent">
+			primary
+		</div>
+		<div id="secondaryContent">
+			secondary<br>
+			<div id="videoContent1">
+			<video src="video/video1.mp4" controls class="videoInSecondary" id="video1">HTML5 Video is required for this example</video>
+			</div>
+            <div id="videoContent2">
+			<video src="video/video2.mp4" controls class="videoInSecondary1" id="video2">HTML5 Video is required for this example</video>
+			</div>
+		</div>
+		<div id="sideContent">
+			side
+			<nav>
+			<ul class="mainMenu">
+				<li class="mainMenu"><a id="news" class="mainMenu" href="#threeColLayout">Новости</a></li>
+				<li class="mainMenu"><a id="photo" class="mainMenu" href="#threeColLayout">Фото</a></li>
+				<li class="mainMenu"><a id="video" class="mainMenu" href="#threeColLayout">Видео</a></li>
+				<li class="mainMenu"><a id="docs" class="mainMenu" href="#">Документы</a></li>
+				<li class="mainMenu"><a id="abouteUs" class="mainMenu" href="#">О нас</a></li>
+				<li class="mainMenu"><a id="help" class="mainMenu" href="#">Помощь</a></li>
+			</ul>
+			</nav>
+		</div>
+		</main>
+
+		<!-- footer -->
+		<footer>
+			<div id="footer">
+				
+			</div>
+		</footer>
+	
+</body>
+</html>
+<!-- jQuery -->
+
+<script>
+	 $("#news").click(function()
+     {
+     $("#primaryContent").load("news1.html");
+     }
+     )//-2
+	$.ajaxSetup({cache: false});
+</script>
+<script>
+	 $("#photo").click(function()
+     {
+     $("#videoContent1").load("listmodal.html");
+     }
+     )//-2
+	$.ajaxSetup({cache: false});
+</script>
+<script>
+	 $("#videoContent1").click(function()
+     {
+     $("#video1").load("listmodal.html");
+     }
+     )//-2
+	$.ajaxSetup({cache: false});
+</script>
+<!-- end jQuery -->

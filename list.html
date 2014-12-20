@@ -94,7 +94,7 @@
 			<div class="kh-bg-layer-zero">kh-bg</div> -->
 
 
-
+<p id="header"><a href="#hello">Заголовок</a></p>
 <img src="img/sun1.png" id="sun1" name="sun1" style="padding-top: 150px; padding-left: 50px;">
 <form>
 	<input type="button" onclick="reWrite();" value="Replace"></form>
@@ -141,7 +141,7 @@
 </script>
 <form action="">
 	<input type="button" value="BR" onclick="brDesc();">
-<h1 name="hello">HELLO, ALL!!! AGAIN</h1>
+<h1 id="hello">HELLO, ALL!!! AGAIN</h1>
 </form>
 <menu type="toolbar">
 	 <li>
@@ -184,7 +184,7 @@
       <p>Modal window</p>
 </div>
 <div id="overlay"></div><!-- Подложка -->
-<a href="#hello">Modal window</a>
+<a href="#header">Modal window</a>
 
 
 <!-- jQuery block -->
@@ -211,9 +211,114 @@
 	});
 });
 </script>
+<br>
+<hr width="80%">
+<br><br><br>
+<br><br><br>
+<form action="http://ya.ru" target="_blank">
+    <input type="text">
+	<input type="submit" value="ya.ru">
+</form>
+<hr width="84%">
 
+<!-- pre-footer -->
+<script>
+	function inspectBox()
+	{
+	if (document.forms['6'].checkThis.checked)
+	   {
+		alert("The box is check");
+	   }
+	   else
+	   {
+	   	alert("The box is not checked at the moment");
+	   }
+}
+</script>
+<div>
+	<form action="">
+	<input type="checkbox" name="checkThis">Check here<br>
+	<input type="button" value="Inspect box" onclick="inspectBox();">
+	</form>
+</div>
+<script>
+	function testArg(addr)
+{
+	var arg=window.open(addr,"","width=600,height=200");
+	return arg*2;
+}
+</script>
+<form action=""><input type="button" value="testArg" onclick="testArg('http://ya.ru');return false;"></form>
+
+<!-- end pre-footer -->
+
+
+<footer>
+	<p align="center" id="start"><a href="#header">start</a></p>
+	<p><a href="#start" id="pos" onclick="chStart();">Влево</a></p>
+</footer>
+<script>
+var state = 2;
+	// получить элемент по ИД
+	function chStart()
+	{
+			if (state==1)
+			 {
+			var start = document.getElementById("start");
+			start.align="center";
+					    state=2;
+			var pos = document.getElementById("pos");
+			pos.innerHTML+='<a href="#start" id="pos" onclick="chStart();">Влево</a>';
+			
+            //проверка, что сейчас содержит в себе переменная pos
+		    var check = window.open("","","width=300,height=200");
+               	check.document.write(pos+"__________"+state);
+		     }
+		    else if (state==2) // т.к. var state в начале скрипта присвоено значение "2", то код функции будет выполнен отсюда
+		    	                 // т.е. ссылка прыгнет влево
+			    {
+		   		var start = document.getElementById("start");
+		   		                start.align="left";
+		   		               	state = 1;
+		   		var pos = document.getElementById("pos");
+		   		pos.innerHTML='<a href="#start" id="pos" onclick="chStart();">Центр</a>';
+               	
+
+			    }
+    }
+
+
+
+//    var currentFeature="2", currentImg="2";
+	// function featureTeaser()
+	// {
+	// 	if (currentFeature=="1")
+	// 	{
+ //          document.all['secondary'].style.visibility="visible";
+ //          currentFeature="2";
+	// 	}
+	// 	else if (currentFeature=="2")
+	// 	{
+	// 		document.all['secondary'].style.visibility="hidden";
+	// 		currentFeature="1";
+	// 	}
+	// }
+
+
+
+</script>
 </body>
 </html>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus beatae sequi perspiciatis est repellat molestiae nulla rerum voluptate nobis provident, eum veniam ipsa alias doloremque blanditiis. Eveniet id quas numquam?
+
+
+
+
+
+
+
+
 <!-- <a href="https://giseo.rkomi.ru/asp/Calendar/WeekViewTime.asp">Расписание</a>
 
 <form action="/asp/Calendar/DayView.asp" method="post" name="View"> -->

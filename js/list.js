@@ -116,6 +116,14 @@
 	});
 });
 
+// end jQuery block
+
+function testArg(arg)
+{
+	var arg=window.open("","","width=200,height=200");
+	return arg;
+}
+
 
 
 
