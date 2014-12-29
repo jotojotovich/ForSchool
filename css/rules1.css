@@ -34,7 +34,7 @@
 		margin: 0 0 20px 15px;
 		font-size: 20pt;
 		border: 1px solid;
-		height: 1000px;
+		height: 1500px;
 		
 	}
 	#sideContent
@@ -77,4 +77,11 @@
 	font-size: 15px;
 	text-decoration: none;
 	
+}
+
+.videoInVk1
+{
+	margin-top: 1000px;
+	width: 770px;
+	position: absolute;
 }

@@ -11,6 +11,7 @@ span class="ts"
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/rules1.css">
 	<script type="text/javascript" src="jquery/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="js/jq-main.js"></script>
 <style type="text/css">
 	*{margin: 0px auto; padding: 0px auto; font-family:verdana; font-size: 12px;}
 	body{background: #444; color: #ccc; transition: 2s;}
@@ -36,21 +37,11 @@ span class="ts"
 	<header>
 		<div class="header">
 			Header
+			<form action=""><input type="button" value="push" onclick="chance(1,10);"></form>
 		</div>
 	</header>
 		<!-- -->
 		<main>
-		<script>
-	
-     $("#news").click(function()
-     {
-     $("#primaryContent").load("news1.html");
-     }
-     	)//-2
-	$.ajaxSetup({
-  cache: false
-});
-</script>
 		<div id="primaryContent">
 			primary
 		</div>
@@ -61,6 +52,12 @@ span class="ts"
 			</div>
             <div id="videoContent2">
 			<video src="video/video2.mp4" controls class="videoInSecondary1" id="video2">HTML5 Video is required for this example</video>
+			</div>
+			<div id="videoContent3">
+			
+<!-- <iframe src="//vk.com/video_ext.php?oid=80957510&id=171063959&hash=015999cfb8c78b32&hd=2" width="853" height="480"  frameborder="0"></iframe> -->
+            <video src="video/curfew.mp4" controls class="videoInVk1" id="video3">HTML5 Video is required for this example</video>
+
 			</div>
 		</div>
 		<div id="sideContent">
@@ -84,6 +81,9 @@ span class="ts"
 				
 			</div>
 		</footer>
+
+		<!-- Java applet -->
+		<applet code="MyCalculator/bin/SimpleCalculator.class">Java</applet>
 	
 </body>
 </html>
@@ -97,10 +97,12 @@ span class="ts"
      )//-2
 	$.ajaxSetup({cache: false});
 </script>
+
 <script>
 	 $("#photo").click(function()
      {
      $("#videoContent1").load("listmodal.html");
+     $("#videoContent1").load("news261214-1.html");
      }
      )//-2
 	$.ajaxSetup({cache: false});
@@ -108,9 +110,35 @@ span class="ts"
 <script>
 	 $("#videoContent1").click(function()
      {
-     $("#video1").load("listmodal.html");
+     //$("#video1").load("listmodal.html");
+     $("#video1").load("news261214-1.html");
      }
      )//-2
 	$.ajaxSetup({cache: false});
 </script>
 <!-- end jQuery -->
+<script>
+// $("#video").click(function(){ // клик по меню "Видео" 
+// $("#videoContent2")
+//   .animate({height: "hide"}, 1000)
+//   .text("Новый текст")
+//   .animate({width: "show"}, 1000);
+// });
+</script>
+<script>
+$("#video").click(function(){ // клик по меню "Видео" 
+$("#videoContent1").html('<video src="video/video1.mp4" controls class="videoInSecondary" id="video1">HTML5 Video is required for this example</video></div>');
+//$("#video1").css("display","none");
+//$("div")
+  //.add($("#video3"))
+  //.html("<b>Ukraina</b>"); return false;
+ // alert("Video?");
+//$(this)
+//.replaceWith("#videoContent1");
+ 
+   //  $("#video1").load("listmodal.html"); return false;
+   
+     
+
+});
+</script>
